@@ -1,17 +1,7 @@
 import React from 'react';
 import Header from './header';
+import Grade from './grade';
 import GradeForm from './grade-form';
-
-function Grade(props) {
-  const { name, course, grade } = props.grade;
-  return (
-    <tr>
-      <td>{ name }</td>
-      <td>{ course }</td>
-      <td>{ grade }</td>
-    </tr>
-  );
-}
 
 function GradeTable(props) {
   const grades = props.grades;
