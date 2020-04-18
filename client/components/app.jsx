@@ -1,26 +1,27 @@
 import React from 'react';
 
 function Header(props) {
-
   return (
-    <h1>Student Grade Table</h1>
+    <h1 className="mt-4">Student Grade Table</h1>
   );
 }
 
 function Grade(props) {
-  const grade = props.grade;
-
+  const { name, course, grade } = props.grade;
   return (
-    <tr></tr>
+    <tr>
+      <td>{ name }</td>
+      <td>{ course }</td>
+      <td>{ grade }</td>
+    </tr>
   );
 }
 
 function GradeTable(props) {
   const grades = props.grades;
   const gradeRows = grades.map(grade => <Grade key={grade.id} grade={grade}/>);
-
   return (
-    <table className="table table-striped">
+    <table className="table table-striped mt-4">
       <thead className="thead-light">
         <tr>
           <th scope="col">Student Name</th>
@@ -29,7 +30,7 @@ function GradeTable(props) {
         </tr>
       </thead>
       <tbody>
-        {gradeRows}
+        { gradeRows }
       </tbody>
     </table>
   );
@@ -44,7 +45,6 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-
     fetch('./api/grades')
       .then(response => response.json())
       .then(grades => this.setState({ grades }))
@@ -55,7 +55,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <Header />
-        <GradeTable grades={this.state.grades}/>
+        <GradeTable grades={ this.state.grades }/>
       </div>
     );
   }
