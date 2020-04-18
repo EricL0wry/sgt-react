@@ -8,6 +8,7 @@ function Header(props) {
 }
 
 function Grade(props) {
+  const grade = props.grade;
 
   return (
     <tr></tr>
@@ -15,12 +16,20 @@ function Grade(props) {
 }
 
 function GradeTable(props) {
+  const grades = props.grades;
+  const gradeRows = grades.map(grade => <Grade key={grade.id} grade={grade}/>);
 
   return (
-    <table>
-      <thead></thead>
+    <table className="table table-striped">
+      <thead className="thead-light">
+        <tr>
+          <th scope="col">Student Name</th>
+          <th scope="col">Course</th>
+          <th scope="col">Grade</th>
+        </tr>
+      </thead>
       <tbody>
-        <Grade />
+        {gradeRows}
       </tbody>
     </table>
   );
