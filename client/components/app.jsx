@@ -1,5 +1,12 @@
 import React from 'react';
 
+function Header(props) {
+
+  return (
+    <h1>Student Grade Table</h1>
+  );
+}
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -9,7 +16,11 @@ class App extends React.Component {
   }
 
   render() {
-    return null;
+    return (
+      <div className="container">
+        <Header />
+      </div>
+    );
   }
 }
 
