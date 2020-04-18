@@ -8,6 +8,12 @@ class GradeForm extends React.Component {
       course: '',
       grade: ''
     };
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
   }
 
   render() {
@@ -21,7 +27,13 @@ class GradeForm extends React.Component {
                 <i className="fas fa-user"></i>
               </div>
             </div>
-            <input type="text" name="name" className="form-control" placeholder="Student Name" />
+            <input
+              type="text"
+              name="name"
+              className="form-control"
+              placeholder="Student Name"
+              onChange={this.handleChange}
+            />
           </div>
           <div className="input-group form-group">
             <div className="input-group-prepend">
@@ -29,7 +41,13 @@ class GradeForm extends React.Component {
                 <i className="far fa-list-alt"></i>
               </div>
             </div>
-            <input type="text" name="course" className="form-control" placeholder="Student Course" />
+            <input
+              type="text"
+              name="course"
+              className="form-control"
+              placeholder="Student Course"
+              onChange={this.handleChange}
+            />
           </div>
           <div className="input-group form-group">
             <div className="input-group-prepend">
@@ -37,7 +55,13 @@ class GradeForm extends React.Component {
                 <i className="fas fa-graduation-cap"></i>
               </div>
             </div>
-            <input type="number" name="grade" className="form-control" placeholder="Student Grade" />
+            <input
+              type="number"
+              name="grade"
+              className="form-control"
+              placeholder="Student Grade"
+              onChange={this.handleChange}
+            />
           </div>
           <div className="form-group d-flex justify-content-end">
             <button type="submit" className="btn btn-success">Add</button>
