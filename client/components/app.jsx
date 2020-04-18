@@ -44,6 +44,17 @@ class App extends React.Component {
     };
   }
 
+  calculateAvg() {
+    const { grades } = this.state;
+    let avg;
+    if (grades.length) {
+      avg = (grades.reduce((acc, curr) => acc + curr.grade, 0)) / grades.length;
+    } else {
+      avg = '--';
+    }
+    return avg;
+  }
+
   componentDidMount() {
     fetch('./api/grades')
       .then(response => response.json())
