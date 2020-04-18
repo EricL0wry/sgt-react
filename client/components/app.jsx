@@ -48,7 +48,7 @@ class App extends React.Component {
     const { grades } = this.state;
     let avg;
     if (grades.length) {
-      avg = (grades.reduce((acc, curr) => acc + curr.grade, 0)) / grades.length;
+      avg = Math.ceil((grades.reduce((acc, curr) => acc + curr.grade, 0)) / grades.length);
     } else {
       avg = '--';
     }
@@ -65,7 +65,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <Header />
+        <Header avg={this.calculateAvg()}/>
         <GradeTable grades={ this.state.grades }/>
       </div>
     );
