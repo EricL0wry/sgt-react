@@ -7,6 +7,9 @@ function Grade(props) {
       <td>{name}</td>
       <td>{course}</td>
       <td>{grade}</td>
+      <td>
+        <button className="btn btn-danger" type="button">Delete</button>
+      </td>
     </tr>
   );
 }
