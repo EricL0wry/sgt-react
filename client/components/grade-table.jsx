@@ -16,9 +16,10 @@ function GradeTable(props) {
           </tr>
         </thead>
         <tbody>
-          {gradeRows}
+          {gradeRows.length ? gradeRows : <tr className="hidden"></tr>}
         </tbody>
       </table>
+      <h4 className={`${!gradeRows.length ? '' : 'hidden'}`}>No Grades Recorded</h4>
     </div>
   );
 }
