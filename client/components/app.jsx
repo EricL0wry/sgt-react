@@ -9,6 +9,24 @@ class App extends React.Component {
     this.state = {
       grades: []
     };
+    this.submitNewGrade = this.submitNewGrade.bind(this);
+  }
+
+  submitNewGrade(grade) {
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(grade)
+    };
+    fetch('./api/grades', options)
+      .then(response => response.json())
+      .then(newGrade => {
+        this.setState({
+          grades: this.state.grades.concat(newGrade)
+        });
+      });
   }
 
   calculateAvg() {
@@ -35,7 +53,7 @@ class App extends React.Component {
         <Header avg={this.calculateAvg()}/>
         <main className="row">
           <GradeTable grades={ this.state.grades }/>
-          <GradeForm />
+          <GradeForm submitNewGrade ={this.submitNewGrade}/>
         </main>
       </div>
     );

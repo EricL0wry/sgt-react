@@ -17,6 +17,18 @@
       "name": "Douglas Crockford",
       "course": "JavaScript",
       "grade": 100
+    },
+    {
+      "name": "Eric Lowry",
+      "course": "Smart Marketing",
+      "grade": "99",
+      "id": 33
+    },
+    {
+      "name": "Farts McGee",
+      "course": "Boating",
+      "grade": "1",
+      "id": 34
     }
   ]
 }

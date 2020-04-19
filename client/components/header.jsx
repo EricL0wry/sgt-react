@@ -10,7 +10,6 @@ function Header(props) {
         <span className="badge badge-secondary ml-2">{avg}</span>
       </h2>
     </header>
-
   );
 }
 
