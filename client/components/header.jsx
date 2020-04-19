@@ -3,7 +3,7 @@ import React from 'react';
 function Header(props) {
   const { avg } = props;
   return (
-    <header className="header row justify-content-between align-items-center mt-4 px-3">
+    <header className="header row justify-content-between align-items-center mt-4 px-3 pb-2 border-bottom">
       <h1>Student Grade Table</h1>
       <h2>
         Average Grade

@@ -1,40 +1,10 @@
 {
   "grades": [
     {
-      "id": 5,
-      "name": "Kyle Simpson",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
-      "id": 12,
-      "name": "Brendan Eich",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
-      "id": 32,
-      "name": "Douglas Crockford",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
       "name": "Will Billiamsom",
-      "course": "Smart Marketing",
-      "grade": "88",
-      "id": 33
-    },
-    {
-      "name": "Katie Conner",
-      "course": "Procrastination",
-      "grade": "89",
-      "id": 34
-    },
-    {
-      "name": "Rob Bobberts",
-      "course": "Smart Marketing",
-      "grade": "99",
-      "id": 35
+      "course": "Boating",
+      "grade": "77",
+      "id": 1
     }
   ]
 }
