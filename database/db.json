@@ -17,12 +17,6 @@
       "name": "Douglas Crockford",
       "course": "JavaScript",
       "grade": 100
-    },
-    {
-      "name": "Farts McGee",
-      "course": "Boating",
-      "grade": "66",
-      "id": 33
     }
   ]
 }

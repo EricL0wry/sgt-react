@@ -28,11 +28,24 @@ class App extends React.Component {
         this.setState({
           grades: this.state.grades.concat(newGrade)
         });
-      });
+      })
+      .catch(error => console.error(error));
   }
 
-  deleteGrade(a, b) {
-    console.log(a, b);
+  deleteGrade(gradeId) {
+    const options = {
+      method: 'DELETE'
+    };
+    fetch(`./api/grades/${gradeId}`, options)
+      .then(response => response.json())
+      .then(() => {
+        const newGrades = this.state.grades.slice();
+        const gradeIndex = newGrades.findIndex(grade => grade.id === gradeId);
+        newGrades.splice(gradeIndex, 1);
+        this.setState({ grades: newGrades });
+
+      })
+      .catch(error => console.error(error));
   }
 
   calculateAvg() {
