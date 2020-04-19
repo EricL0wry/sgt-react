@@ -23,6 +23,7 @@ class App extends React.Component {
     fetch('./api/grades', options)
       .then(response => response.json())
       .then(newGrade => {
+        newGrade.grade = parseInt(newGrade.grade);
         this.setState({
           grades: this.state.grades.concat(newGrade)
         });
@@ -53,7 +54,7 @@ class App extends React.Component {
         <Header avg={this.calculateAvg()}/>
         <main className="row">
           <GradeTable grades={ this.state.grades }/>
-          <GradeForm submitNewGrade ={this.submitNewGrade}/>
+          <GradeForm submitNewGrade ={ this.submitNewGrade }/>
         </main>
       </div>
     );

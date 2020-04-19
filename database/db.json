@@ -19,16 +19,22 @@
       "grade": 100
     },
     {
-      "name": "Eric Lowry",
+      "name": "Will Billiamsom",
       "course": "Smart Marketing",
-      "grade": "99",
+      "grade": "88",
       "id": 33
     },
     {
-      "name": "Farts McGee",
-      "course": "Boating",
-      "grade": "1",
+      "name": "Katie Conner",
+      "course": "Procrastination",
+      "grade": "89",
       "id": 34
+    },
+    {
+      "name": "Rob Bobberts",
+      "course": "Smart Marketing",
+      "grade": "99",
+      "id": 35
     }
   ]
 }
